@@ -1,0 +1,8 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=3875
+
+when edit git log file in vim IDE, make a git diff between two tags
+
+<leader>gd for make a git diff between for tags
+<leader>gf for open a file in the log like:
+ --- a/xxx.c
++++ b/xxx.c
