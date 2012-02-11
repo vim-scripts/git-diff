@@ -43,7 +43,8 @@ function! GitDiffLog()
 	 else
 		 "let l:gitdiff_filename = 'gitdiff_'.l:firsttag.'_'.l:secondtag.'.c'
 		 "let l:gitdiff_filename = '/dev/shm/gitdiff_'.l:firsttag.'_'.l:secondtag.'.c'
-		 let l:_cmd_ = 'git diff '.l:firsttag.' '.l:secondtag.' > ' .  l:gitdiff_filename
+		 "let l:_cmd_ = 'git diff '.l:firsttag.' '.l:secondtag.' > ' .  l:gitdiff_filename
+		 let l:_cmd_ = 'git diff '.l:secondtag.'^ '.l:secondtag.' > ' .  l:gitdiff_filename
 	 endif
 	 let _resp = system(l:_cmd_)
 	 "exec ":e ".'gitdiff_'.l:firsttag.'_'.l:secondtag.'.c'
